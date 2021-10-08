@@ -1,0 +1,50 @@
+<?php
+/*
+	SHChat
+	(C) by Scripthosting.net
+	http://www.shchat.net
+
+	Free for non-commercial use:
+	Licensed under the "Creative Commons 3.0 BY-NC-SA"
+	http://creativecommons.org/licenses/by-nc-sa/3.0/
+	
+	Support-Forum: http://board.scripthosting.net/viewforum.php?f=18
+	Don't send emails asking for support!!
+*/
+
+// Load global php settings (do not change!)
+require_once("phpconfig.inc.php");
+
+$config = Array(	
+	"host"				=>	"{dbhost}",  // database hostname or ip
+	"username"			=>	"{dbuser}",  // database username
+	"userpass"			=>	"{dbpass}",  // database userpass
+	"database"			=>	"{dbname}",  // database name
+	"port"				=>	{dbport},  // database port (mysql default 3306)
+	"prefix"			=>	"shchat_",  // database prefix (default "shchat_")
+	"postfix"			=>	0,  // database postfix (default 0)
+	"socket"			=>	"{dbsocket}",  // database socket (default empty)
+	"scriptpath"		=>	"{scriptpath}",  // url path to shchat
+	"defaultLanguage" 	=>	"{lang}",  // default language (ISO-639-1)
+	"template_name"		=>	"{template}",  // active template name
+	"overall_title"		=>	"{title}",  // overall chat title
+	"admin_email"		=>	"{admin_email}",  // admin email address
+	"old_lines"			=>	false,  // show older chat lines when joining a channel
+	"userlimit"			=>	{userlimit},  // Chat overall user limit
+	"email_aktivierung"	=>	1,  // User account activation by admin (0) or by user (1)
+	// E-Mail Config
+	"smtp"				=>	Array(		
+		"isActive"	=>	false,  // activate alternate smtp server (false/true)
+		"hostname"	=>	"localhost",  // smtp hostname or ip
+		"port"		=>	25,  // SMTP Port (default: 25)
+		"sender"	=>	"admin@localhost",  // sender email address
+		"username"	=>	"admin",  // smtp username
+		"password"	=>	"",  // smtp password
+		"encpw" 	=>	false,  // is password encrypted with crypto? (true/false)
+		"useTLS"	=>	false,  // use TLS for smtp encryption (server support required!)
+	),
+);
+
+// Load program settings (do not change!)
+require_once("pathconfig.inc.php");
+?>
