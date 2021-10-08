@@ -1,0 +1,19 @@
+<h1 style="text-align:center;margin:0;margin-bottom:10px;">{@Channel löschen}</h1>
+<div style="text-align:center">{output}</div>
+
+<form method="post" action="admin.php?action=del_channel&amp;noheader=true">
+<div style="text-align:center;">
+	<select name="delc">
+		<option value="0">- {@bitte wählen} -</option>
+		{channel_list}
+	</select>
+</div>
+<br />
+	
+<div style="text-align:center;">
+	<input type="button" value="{@zurück}" onclick="javascript:document.location.href='admin.php?action=channel'" /> <input type="submit" value="{@löschen}" />
+</div>
+	
+</form>
+<br />
+

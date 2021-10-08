@@ -1,0 +1,57 @@
+<div style="text-align:center">{output}</div>
+
+<form name="form" method="post" action="admin.php?action=edit_channel&amp;ChannelID={channel_id}&amp;noheader=true">
+<input type="hidden" name="ChannelID" value="{channel_id}" />
+
+<table style="width:98%;margin:0px auto;padding:4px;">
+	<tr>
+		<th class="admin_th" colspan="2">{@Channel editieren}</th>
+	</tr>
+	<tr>
+		<td class="admin_td0" style="width:200px;">{@Channel Name}</td>
+		<td class="admin_td0"><b>{channel}</b></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1">{@Benutzerlimit}</td>
+		<td class="admin_td1"><input type="text" name="userlimit" style="width:60px;" maxlength="6" value="{userlimit}" /></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0">{@Schreibrechte}</td>
+		<td class="admin_td0"><select name="moderiert">
+				<option value="0"{unmoderated}>{@Nicht moderiert}</option>
+				<option value="1"{moderated}>{@moderiert}</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1">{@Mindestrang}</td>
+		<td class="admin_td1">
+			<select name="minlevel">
+			{ranks}
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0">{@versteckt}</td>
+		<td class="admin_td0">
+			<select name="versteckt" disabled="disabled">
+				<option value="0"{unhidden}>{@Nicht versteckt}</option>
+				<option value="1"{hidden}>{@versteckt}</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1">{@Willkommensnachricht}</td>
+		<td class="admin_td1"><input type="text" name="welcome" value="{welcome}" style="width:400px" /></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0" colspan="2"><input type="button" value="{@abbrechen}" onclick="document.location.href='?action=channel'" /> <input type="submit" name="update" value="{@speichern}" /></td>
+	</tr>
+</table>
+</form>

@@ -1,0 +1,17 @@
+<table style="margin:0px auto;width:98%;">
+	<tr>
+		<th class="admin_th">{@Channel}</th>
+		<th class="admin_th" style="width:130px;">{@Benutzerlimit}</th>
+		<th class="admin_th" style="width:130px;">{@Mindestrang}</th>
+		<th class="admin_th" style="width:130px;">{@moderiert}</th>
+		<th class="admin_th" style="width:130px;">{@versteckt}</th>
+	</tr>
+	
+	{channel_list}
+	
+</table>
+
+<p style="text-align:center">
+	<input type="button" value="{@Channel erstellen}" onclick="document.location.href='?action=new_channel'" />&nbsp;
+	<input type="button" value="{@Channel löschen}" onclick="document.location.href='?action=del_channel'" />
+</p>

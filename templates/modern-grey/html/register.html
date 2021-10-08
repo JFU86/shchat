@@ -1,0 +1,53 @@
+<div id="register" style="margin-top:5px;">
+	<form name="register" method="post" action="?site=register">	
+	<table class="whois-table">
+	    <tr>
+		      <th colspan="2">{overall_title}: {@Registrierung}</th>
+	    </tr>
+	    {error}
+	    <tr>
+		      <td class="whois-td0">{@Nickname}:</td>
+		      <td class="whois-td0"><input type="text" name="name" style="width:250px;" maxlength="16" value="{POST.name}" autocomplete="off" /> <span style="font-size:11px; color:red;">* 3-16 {@Zeichen}</span></td>
+	    </tr>
+	    <tr>
+		      <td class="whois-td1">{@Passwort}:</td>
+		      <td class="whois-td1"><input type="password" name="securepass" style="width:250px;" maxlength="16" autocomplete="off" /> <span style="font-size:11px; color:red;">* 6-16 {@Zeichen}</span></td>
+	    </tr>
+	    <tr>
+		      <td class="whois-td0">{@Passwort wiederholen}:</td>
+		      <td class="whois-td0"><input type="password" name="resecurepass" style="width:250px;" maxlength="16" autocomplete="off" /></td>
+	    </tr>
+	     <tr>
+		      <td class="whois-td1">{@E-Mail Adresse}:</td>
+		      <td class="whois-td1"><input type="email" name="email" style="width:250px;" maxlength="50" value="{POST.email}" autocomplete="off" /> <span style="font-size:11px;">({@versteckt})</span></td>
+	    </tr>
+	    <tr>
+			<td class="whois-td0">{@Geschlecht}:</td>
+			<td class="whois-td0">
+				<input type="radio" name="gender" value="m" {m_checked}/><img src="templates/{templateName}/img/male.gif" alt="male" /> {@männlich}<br />
+				<input type="radio" name="gender" value="f" {f_checked}/><img src="templates/{templateName}/img/female.gif" alt="female" /> {@weiblich}
+			</td>
+	    </tr>
+	    <tr>
+		      <td class="whois-td1">{@Sicherheitscode}:</td>
+		      <td class="whois-td1"><input type="text" name="code" style="width:60px;" maxlength="5" autocomplete="off" /> <img src="system/captcha.php" alt="code" /></td>
+	    </tr>
+	    <tr>
+		      <td colspan="2"></td>
+	    </tr>
+	    <tr>
+		      <td class="whois-td0" colspan="2"><img src="templates/{templateName}/img/b_tipp.png" alt="info" /> <span style="font-size:11px;"><b><a href="?site=terms" target="_blank">{@Mit der Registrierung akzeptierst du die gültigen Nutzungsbedingungen}</a>.<br />{@Nach Abschluss der Registrierung erhälst du eine E-Mail, über die das neue Benutzerkonto zunächst aktiviert werden muss, bevor du den Chat betreten kannst.}</b></span></td>
+	    </tr>
+	    <tr>
+		      <td colspan="2"></td>
+	    </tr>
+
+		<tr>
+			<td class="whois-td1" colspan="2">
+				<input type="button" value="« {@zurück}" onclick="document.location.href='./'" />
+				<input type="submit" name="register" value="{@Registrierung abschließen}" />
+			</td>
+	    </tr>
+	   </table>	
+	</form>
+</div>

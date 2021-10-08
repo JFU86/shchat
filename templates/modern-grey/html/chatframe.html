@@ -1,0 +1,98 @@
+<!-- chat frame start -->
+<div id="chat">
+	<div id="rightLayer">	
+		<!-- Online Userlist -->	
+		<div id="online">
+			{online}
+		</div>
+			
+		<br />	
+		
+		<!-- Chatinfo Layer -->	
+		<table style="width:100%;margin:0px auto;">
+		<tr>
+			<td class="whois-top" style="text-align:center;"><b>{@Chatinfo}</b></td>
+		</tr>
+		<tr>
+			<td class="whois-td0">
+				<img src="templates/{templateName}/img/item.png" alt="item" /> <span><a href="javascript:whoisonline();">{@Wer ist online?}</a></span>
+			</td>
+		</tr>		
+		<tr>
+			<td class="whois-td1">
+				<img src="templates/{templateName}/img/item.png" alt="item" /> <span><a href="javascript:userlist();">{@Benutzerliste}</a></span>
+			</td>
+		</tr>			
+		<tr>
+			<td class="whois-td0">
+				<img src="templates/{templateName}/img/item.png" alt="item" /> <span><a href="javascript:top10();">{@Top 10}</a></span>
+			</td>
+		</tr>	
+		</table>
+	</div>
+
+
+	<div id="channel">
+		<b>{@Channel}:</b>	{channel_list} |
+	</div>
+	
+	
+	<div id="chat_welcome">
+		<b>{welcome} {username}, {@willkommen im Chat!}</b><br />
+		<span>{channel_welcome}</span>
+	</div>
+	
+	
+	<div id="chat_content">
+		<div style="text-align:center;"><img src="templates/{templateName}/img/10.gif" alt="Ladebalken" /> <b>{@CHAT WIRD GELADEN}</b></div>
+	</div>
+	
+	
+	<div id="smileys" style="text-align:center;">
+		<div id="smiley-top">
+			<table style="width:100%;">
+				<tr>
+					<td>{@Smileys}</td>
+					<td style="text-align:right;"><a href="javascript:smileys(0);">X</a></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="smiley-content">{smileys}</div>
+	</div>
+	
+	
+	<div id="post">
+		<form onsubmit="return(SendData());" action="chat.php">	
+		<table style="width:100%;">
+		<tr>
+			<td>
+				<select id="textDestination" style="min-width:100px;">
+					<option value="channel">{channel}</option>
+				</select>
+				<input type="text" id="text" name="text" maxlength="255" style="min-width:300px;width:60%;" autocomplete="off" />
+				<select style="background-color:#EFEFEF;min-width:60px;" id="farbe" name="farbe" onchange="javascript:document.getElementById('text').value='/color '+this.value; SendData();">
+					{colors}
+				</select>
+			</td>
+			<td style="text-align:right;">
+				<input type="checkbox" name="autoscroll" id="autoscroll" onclick="javascript:document.getElementById('text').value='/autoscroll';SendData();" {autoscroll_checked}/>&nbsp;{@Autoscroll}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<div style="text-align:left;float:left;">{smileys25}</div>
+				<div style="text-align:right;float:right;margin-top:10px;">
+					<span style="margin-right:20px;"><a href="javascript:profil();">{@Profil}</a></span>
+					{admin_panel}
+					<span style="margin-right:20px;"><a href="javascript:smileys(1);">{@Smileys}</a></span>
+					<span style="margin-right:20px;"><a href="javascript:help();"><b>{@Hilfe}</b></a></span>
+					<span><a href="javascript:logout();">{@verlassen}</a></span>
+				</div>
+			</td>
+		</tr>
+		</table>
+		</form>
+	</div>
+</div>
+<!-- chat frame end -->

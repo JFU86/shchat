@@ -1,0 +1,59 @@
+{output}
+
+<form name="form" method="post" action="admin.php?action=new_channel&amp;noheader=true">
+
+<table style="width:98%;margin:0px auto;padding:4px;">
+	<tr>
+		<th class="admin_th" colspan="2">{@Channel erstellen}</th>
+	</tr>
+	<tr>
+		<td class="admin_td0" style="width:200px;">{@Channel Name}</td>
+		<td class="admin_td0"><input type="text" name="name" style="width:200px;" autocomplete="off" /></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1">{@Benutzer Limit}</td>
+		<td class="admin_td1"><input type="text" name="userlimit" value="0" style="width:60px;" /></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0">{@Schreibrechte}</td>
+		<td class="admin_td0">
+			<select name="moderiert">
+				<option value="0" selected="selected">{@Nicht moderiert}</option>
+				<option value="1">{@moderiert}</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1">{@Mindestrang}</td>
+		<td class="admin_td1">
+			<select name="minlevel">
+			{ranks}
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0">{@Versteckt}</td>
+		<td class="admin_td0">
+			<select name="versteckt" disabled="disabled">
+				<option value="0" selected="selected">{@Nicht versteckt}</option>
+				<option value="1">{@versteckt}</option>
+			</select>
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1">{@Willkommensnachricht}</td>
+		<td class="admin_td1"><input type="text" name="welcome" style="width:400px;" /></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0" colspan="2"><input type="button" value="{@abbrechen}" onclick="document.location.href='?action=channel'" /> <input type="submit" value="{@erstellen}" /></td>
+	</tr>
+</table>
+</form>
+<br />
+

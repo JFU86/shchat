@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="de">
+
+<head>
+	<title>{overall_title}</title>
+	
+	<!-- 
+		SHChat - Professional Chatsoftware
+		(C) by SHChat.net & Scripthosting.net
+			
+		SHChat Home: http://www.shchat.net
+		Support-Forum: http://board.scripthosting.net
+	 -->
+	
+	<!-- Meta block -->
+	<meta charset="UTF-8" />
+	<meta name="robots" content="INDEX,NOFOLLOW" />
+	<meta name="keywords" content="SHChat, Professional Chatsoftware, Scripthosting.net" />
+	<meta name="author" content="Scripthosting.net" />
+	<meta name="dcterms.created" content="{date}" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	
+	<!-- Styles -->
+	<link rel="stylesheet" href="templates/{templateName}/css/style.css" type="text/css" media="screen" />
+	
+	<!-- Scripts -->
+	<script src="mootools-core.js"></script>
+	<script src="charset.js"></script>
+	<script src="chat.js"></script>	
+	<script>window.addEvent('domready',function(){onStart();});window.addEvent('resize',function(){viewport=document.querySelector("meta[name=viewport]");viewport.setAttribute('content','width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');});</script>		
+</head>
+
+<body>

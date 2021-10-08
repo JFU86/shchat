@@ -1,0 +1,38 @@
+<div id="reminder" style="margin-top:5px;">
+	<form name="register" method="post" action="?site=reminder&amp;mode=check">
+	
+		<table class="whois-table">
+			<tr>
+			      <th colspan="2">{@Passwort vergessen}</th>
+		    </tr>
+		    {error}{output}
+		    <tr>
+			      <td class="whois-td1" colspan="2">{@Wenn du dein Passwort vergessen hast, kannst du hier unter Angabe deiner E-Mail Adresse und dem Benutzernamen ein neues Passwort anfordern.}</td>
+		    </tr>
+		    <tr>
+			      <td class="whois-td0">{@Nickname}:</td>
+			      <td class="whois-td0"><input type="text" name="username" style="width:250px;" maxlength="16" autocomplete="off" /></td>
+		    </tr>
+		    <tr>
+			      <td class="whois-td1">{@E-Mail Adresse}:</td>
+			      <td class="whois-td1"><input type="email" name="email" style="width:250px;" autocomplete="off" /></td>
+		    </tr>
+		    
+		   <tr>
+			      <td class="whois-td0">{@Sicherheitscode}:</td>
+			      <td class="whois-td0"><input type="text" name="code" style="width:60px;" maxlength="5" autocomplete="off" /> <img src="system/captcha.php" alt="code" /></td>
+		    </tr>
+		    <tr>
+		      <td colspan="2"></td>
+		    </tr>
+			<tr>
+				<td class="whois-td1" colspan="2">
+					<input type="button" value="« {@zurück}" onclick="document.location.href='./'" />
+					<input type="submit" name="register" value="{@Neues Passwort zusenden}" />
+				</td>
+		    </tr>
+		</table>
+		
+		<p style="text-align:center;"></p>	
+	</form>
+</div>

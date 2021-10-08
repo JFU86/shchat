@@ -1,0 +1,13 @@
+Hello {username} and welcome to the Chat!
+
+Please don't give your password to anyone. Nobody will ask you for it from the team.
+
+You need to activate your chat account before you can log in for the first time. Please use the link below:
+{activate_url}
+
+The chat can be found at: 
+{url}
+
+
+Kind regards
+The Chat Team

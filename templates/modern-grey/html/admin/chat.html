@@ -1,0 +1,38 @@
+<div style="margin-left:10px;">{msg}</div>
+
+<table style="width:98%; margin:0px auto;">
+<tr>
+	<th class="admin_th" colspan="2">{@Administrative Aktionen}</th>
+</tr>
+<tr>
+	<td class="admin_td0">
+		<b>{@Chatlog löschen}</b><br />
+		<span style="font-size:11px;">{@Alle Einträge im Chat, die älter als heute sind werden unwiderruflich aus dem Log gelöscht.}</span>
+	</td>
+	<td class="admin_td0" style="width:150px;text-align:center;">
+		<input type="button" value="{@ausführen}" onclick="var ok=confirm('{%@Chatlog wirklich löschen?}'); if(ok==true){document.location.href='?action=chat&amp;mode=chatlog';}" />
+	</td>
+</tr>
+
+<tr>
+	<td class="admin_td1">
+		<b>{@Unbestätigte Benutzer löschen}</b><br />
+		<span style="font-size:11px;">{@Es werden alle Benutzer gelöscht, die Ihre Benutzer-Registrierung nicht innerhalb von 7 Tagen per E-Mail bestätigt haben.}</span>
+	</td>
+	<td class="admin_td1" style="width:150px;text-align:center;">
+		<input type="button" value="{@ausführen}" onclick="var ok=confirm('{%@Unbestätigte Benutzer wirklich löschen?}'); if(ok==true){document.location.href='?action=chat&amp;mode=unconfirmed';}" />
+	</td>
+</tr>
+
+<tr>
+	<td class="admin_td0">
+		<b>{@Inaktive Benutzer löschen}</b><br />
+		<span style="font-size:11px;">{@Es werden alle Benutzer gelöscht, die länger als 60 Tage nicht aktiv waren.}</span>
+	</td>
+	<td class="admin_td0" style="width:150px;text-align:center;">
+		<input type="button" value="{@ausführen}" onclick="var ok=confirm('{%@Inaktive Benutzer löschen?}'); if(ok==true){document.location.href='?action=chat&amp;mode=inaktiv';}" />
+	</td>
+</tr>
+</table>
+
+<br />

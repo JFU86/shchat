@@ -1,0 +1,79 @@
+<div id="index">
+	<form name="login" action="index.php" method="post">
+	<table style="border-collapse:separate;margin:0px auto;">
+	<tr>
+		<td id="login-form">						
+			<h1 style="text-align:center;">{overall_title}</h1>
+				
+			<table style="width:250px;margin:0px auto;">
+				<tr>
+					<td style="width:50%;">{@Nickname}:</td>
+					<td style="width:50%;"><input type="text" id="name" name="name" style="width:150px;" maxlength="20" value="{GET.user}" disabled="disabled" /></td>
+				</tr>
+				<tr>
+					<td style="width:50%;">{@Passwort}:</td>
+					<td style="width:50%;"><input type="password" id="securepass" name="securepass" style="width:150px;" maxlength="20" disabled="disabled" /></td>
+				</tr>
+				<tr>
+					<td style="width:50%;">{@Channel}:</td>
+					<td style="width:50%;">
+						<select id="startchannel" name="startchannel" disabled="disabled">{channel_list}</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">&nbsp;</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:right;">
+						<input type="button" value="{@Passwort vergessen}" onclick="document.location.href='?site=reminder'" />
+						<input type="submit" name="submitLogin" id="submit" value="{@anmelden} &#0187;" onclick="$('index').fade('out'); $('chat_loading').style.display='block';" disabled="disabled" />
+					</td>
+				</tr>
+			</table>
+									
+			<p style="text-align:center;"><b><a href="?site=register">{@Neues Benutzerkonto anlegen}</a></b></p>
+		</td>
+		<td id="channel-list" rowspan="2">
+			<h4>{@Channelübersicht}</h4>
+			<div>{Channel}</div>
+		</td>
+	</tr>	
+	<tr>
+		<td id="news-display">
+			<h3>Willkommen beim Chat!</h3>
+			<br />
+			<div>
+				Wenn du hier neu bist, kannst du dich kostenlos registrieren. Wenn du bereits registriert bist, kannst du dich oben anmelden und direkt mit dem Chatten loslegen.
+			</div>
+			<br />
+			<div>
+				<h4>Nutzungsbedingungen</h4>
+				Überall dort, wo Menschen aufeinander treffen, sind bestimmte Regeln erforderlich, um miteinander gut auszukommen. 
+				In Chats treffen sich Menschen mit unterschiedlichsten Ansichten und Eigenschaften. 
+				Damit auch die Chatter gut miteinander auskommen, gibt es die "<a href="http://www.chatiquette.de" target="_blank">Chatiquette</a>". 
+				Das ist die Etikette der Chatter im Internet. Sie beinhaltet Hinweise, wie man sich selbst verhalten soll und was man von anderen im Chat erwarten kann.<br />
+				Bitte beachte ebenfalls die zusätzlichen <a href="?site=terms" target="_blank">Nutzungsbedingungen</a> für den Chat.
+			</div>
+		</td>
+	</tr>	
+	<tr>
+		<td id="index-foot" colspan="2">
+			<div>
+				Powered by <b>SHChat</b> Professional Chatsoftware<br />
+				&copy; by <a href="http://www.shchat.net" target="_blank">SHChat.net</a> &amp; <a href="http://www.scripthosting.net" target="_blank">Scripthosting.net</a> since 2006
+			</div>
+		</td>
+	</tr>	
+	</table>
+	</form>
+</div>
+
+<div id="chat_loading"><img src="templates/{templateName}/img/loading.gif" alt="loading" /></div>
+
+<div id="window-javascript">
+	<div style="text-align:justify;">
+		<img src="templates/{templateName}/img/s_error.png" alt="Wichtig" /> <b>{@Fehler}:</b> {@In deinem Browser ist JavaScript deaktiviert und der Chat ist somit nicht funktionsfähig. Bitte aktiviere JavaScript und versuche es erneut.}
+	</div>
+</div>
+
+<script>$("name").disabled=false;$("securepass").disabled=false;$("startchannel").disabled=false;$("submit").disabled=false;$("window-javascript").style.visibility='hidden';</script>

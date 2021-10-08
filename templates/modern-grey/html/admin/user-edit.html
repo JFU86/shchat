@@ -1,0 +1,77 @@
+<div style="color:#800000; text-align:center">{output}</div>
+
+<form action="?action=user_edit&amp;id={user_id}&amp;noheader=true" method="post">
+	<input type="hidden" name="mode" value="save" />
+	<table style="margin:0px auto;width:98%;">	
+	<tr>
+		<th class="admin_th" colspan="2"><b>{@Benutzerprofil von} {username}</b></th>
+	</tr>
+	
+	<tr>
+		<td style="width:160px" class="admin_td0"><b>{@Nickname}</b></td>
+		<td class="admin_td0"><b>{username}</b></td>
+	</tr>
+	
+	<tr>		
+		<td class="admin_td1"><b>{@Rang}</b></td>
+		<td class="admin_td1">{rang}</td>
+	</tr>
+	
+	<tr>		
+		<td class="admin_td0"><b>{@E-Mail} *</b></td>
+		<td class="admin_td0"><input type="email" name="email" value="{email}" style="width:300px;" /></td>
+	</tr>
+	
+	<tr>		
+		<td class="admin_td1"><b>{@Passwort ändern}</b></td>
+		<td class="admin_td1"><input type="password" name="pass" size="25" /> <span style="font-size:11px;">{@zum Ändern ausfüllen}</span></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0"><b>{@Geschlecht}</b></td>
+		<td class="admin_td0"><img src="templates/{templateName}/img/{gender}" alt="gender" /></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1"><b>{@Registriert am}</b></td>
+		<td class="admin_td1">{reg_date}</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0"><b>{@Letzte Anmeldung}</b></td>
+		<td class="admin_td0">{last_login}</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1"><b>{@Client Info}</b></td>
+		<td class="admin_td1"><span style="font-size:11px;">{client}<br />IP: {ipaddress} ({hostname})</span></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0"><b>{@Zeichen}</b></td>
+		<td class="admin_td0">{charcount}</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1"><b>{@Chatzeit}</b></td>
+		<td class="admin_td1"><span style="font-size:11px;">{chat_time}</span></td>
+	</tr>	
+	
+	<tr>
+		<td class="admin_td0"><b>{@Benutzer löschen}</b></td>
+		<td class="admin_td0"><input type="button" value="{@ausführen}" onclick="var ok=confirm('{%@Benutzer wirklich unwiderruflich löschen? Es werden alle Beiträge und Benutzerdaten entfernt.}'); if(ok==true){document.location.href='?action=user_edit&amp;mode=delete&amp;id={user_id}';}" /> <span style="font-size:11px;">{@Hat keine Wirkung bei Administratoren!}</span></td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td1"><b>{@Status}</b></td>
+		<td class="admin_td1">{status}</td>
+	</tr>
+	
+	<tr>
+		<td class="admin_td0" colspan="2"><input type="button" value="{@abbrechen}" onclick="document.location.href='?action=user'" /> <input type="submit" value="{@speichern}" /></td>
+	</tr>	
+	
+	</table>
+</form>
+<br />
+

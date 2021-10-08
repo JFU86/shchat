@@ -1,0 +1,16 @@
+Hello {username},
+
+you got this e-mail because you requested a new password!
+Please use this data in the future:
+
+*Name*: {username}
+*Pass*: {password}
+
+Please don't give your password to anyone. Nobody will ask you for it from the team.
+
+The chat can be found at:
+{url}
+
+
+Kind regards
+The Chat Team
