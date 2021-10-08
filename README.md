@@ -5,14 +5,14 @@ Ziel des Projekts ist es, eine einfach zu installierende und universal einfach z
 shchat  shchat  shchat  shchat 
 
 Funktionsumfang:
-item Individuell anpassbare Oberfläche über Templates
-item Benutzer-Registrierung
-item Grafische Darstellung von Smileys im Chat
-item Öffentliche, moderierte und private Chat-Channel
-item Flüsterfunktion außerhalb der normalen Channels
-item "Wer-ist-Online" Benutzer-Liste
-item Umfangreiche Anzahl an Chatbefehlen
-item Administrative Oberfläche, Berechtigungen, Ränge
+* Individuell anpassbare Oberfläche über Templates
+* Benutzer-Registrierung
+* Grafische Darstellung von Smileys im Chat
+* Öffentliche, moderierte und private Chat-Channel
+* Flüsterfunktion außerhalb der normalen Channels
+* "Wer-ist-Online" Benutzer-Liste
+* Umfangreiche Anzahl an Chatbefehlen
+* Administrative Oberfläche, Berechtigungen, Ränge
 
 Systemanforderung:
 PHP Version: 5.3.3 bis 7.3.x (mit installiertem GD)
